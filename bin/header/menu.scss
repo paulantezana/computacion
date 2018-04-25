@@ -9,8 +9,8 @@
     & > li > a{
         line-height: 5rem;
         &:hover{
-            color: color(color,3);
-            background: shade(white-bis);
+            color: color(color);
+            // background: shade(white-bis);
         }
     }
 }

@@ -1,4 +1,4 @@
-{#
+x{#
 /**
  * @file
  * Theme override to display a node.
@@ -73,7 +73,7 @@
 {%
     set classes = [
         'node',
-        'node--type-' ~ node.bundle|clean_class,
+        'node--' ~ node.bundle|clean_class,
         node.isPromoted() ? 'node--promoted',
         node.isSticky() ? 'node--sticky',
         not node.isPublished() ? 'node--unpublished',
@@ -83,13 +83,13 @@
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
 
-    {#{{ title_prefix }}#}
-    {#{% if not page %}#}
-        {#<h2{{ title_attributes }}>#}
-            {#<a href="{{ url }}" rel="bookmark">{{ label }}</a>#}
-        {#</h2>#}
-    {#{% endif %}#}
-    {#{{ title_suffix }}#}
+    {{ title_prefix }}
+        {% if not page %}
+            <h2{{ title_attributes }}>#}
+                <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+            </h2>
+        {% endif %}
+    {{ title_suffix }}
 
     {#{% if display_submitted %}#}
         {#<footer class="node__meta">#}
@@ -100,13 +100,8 @@
             {#</div>#}
         {#</footer>#}
     {#{% endif %}#}
-    <div>
-        {{ content.field_carrera_img }}
-    </div>
-    <div>
-        {{ content.body }}
-    </div>
-    <div>
-        {{ content.field_carrera_pdf}}
+    
+    <div class="article__content__full">
+        {{ content }}
     </div>
 </article>

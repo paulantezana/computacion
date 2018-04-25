@@ -2,7 +2,30 @@
 @import "~sedna/bin/sedna.scss";
 
 @include sn-container-item();
+@include coreGrid();
 @include flexCssHelpers();
+
+@include sn-content();
+
+
 
 @import "header/all";
 @import "teaser/all";
+@import "full/all";
+@import "drupal/all";
+
+
+.grid-template{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
+    grid-gap: 2rem;
+}
+
+
+.path-frontpage{
+    [class*="js-view-dom"] {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
+        grid-gap: 2rem;
+    }
+}

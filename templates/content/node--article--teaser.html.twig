@@ -81,27 +81,34 @@
     {#]#}
 {#%}#}
 {#{{ attach_library('classy/node') }}#}
-<article class="teaser">
+<article class="teaser teaser-carrera">
+    <div class="teaser-carrera__poster">
+        {{ content.field_poster }}
+    </div>
 
-    {{ title_prefix }}
-    {% if not page %}
-        <h2{{ title_attributes }} class="teaser__title">
-            <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-        </h2>
-    {% endif %}
-    {{ title_suffix }}
+    <div class="teaser-carrera__content">
+        {{ title_prefix }}
+        {% if not page %}
+            <h2{{ title_attributes }} class="teaser__title">
+                <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+            </h2>
+        {% endif %}
+        {{ title_suffix }}
 
-    <div{{ content_attributes.addClass('node__content') }}>
-        {{ content }}
-    </div>  
+        <div{{ content_attributes.addClass('node__content') }}>
+            {{ content.body }}
+        </div>  
 
-    {% if display_submitted %}
-        <div class="teaser__date">{{ date }}</div>
-        <footer class="teaser__footer">
-            {{ author_picture }}
-            <div class="teaser__footer__autor">
-                {{ author_name }}
-            </div>
-        </footer>
-    {% endif %}
+
+
+        {% if display_submitted %}
+            <div class="teaser__date">{{ date }}</div>
+            <footer class="teaser__footer">
+                {{ author_picture }}
+                <div class="teaser__footer__autor">
+                    {{ author_name }}
+                </div>
+            </footer>
+        {% endif %}
+    </div>    
 </article>

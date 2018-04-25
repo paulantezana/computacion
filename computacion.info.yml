@@ -19,8 +19,8 @@ regions:
   help: help
   breadcrumb: Breadcrumb
   content: Content
-  sidebar_first: 'Sidebar first'
-  sidebar_second: 'Sidebar second'
+  sidebar_left: 'Sidebar Left'
+  sidebar_right: 'Sidebar Right'
   footer: Footer
 libraries:
   - computacion/base

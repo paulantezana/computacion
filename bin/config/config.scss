@@ -5,7 +5,7 @@ $devMode        : false; // Enable and disable mode developers
 $container      : sn-container; // change container element
 $item           : sn-item; // change item element
 
-$max-width      : 1250px; // max width for containers
+$max-width      : 1300px; // max width for containers
 $fractions      : 3 6; // fractions
 $gutter         : 0.9em; // separation items
 
@@ -71,13 +71,13 @@ $sizes: (
 );
 
 // APP font styles
-$app-font-color                 : shade(grey-lighter);
+$app-font-color                 : hsl(0, 0%, 29%);
 $app-font-color-invert          : findColorInvert($app-font-color);
-$app-font-color-light           : shade(grey);
-$app-font-color-strong          : shade(grey-darker);
+$app-font-color-light           : hsl(0, 0%, 48%);
+$app-font-color-strong          : hsl(0, 0%, 21%);
 
 $app-font-family                : 'Open Sans';
-$app-font-size                  : 0.9rem;
+$app-font-size                  : .9rem;
 
 $app-font-weight-light          : 300;
 $app-font-weight                : 400;
@@ -89,22 +89,22 @@ $app-font-weight-bold           : 700;
 $app-background         : $white;
 $app-line-height        : 1.6em;
 
-$app-border-color       : shade(grey-lighter);
-$app-border-color-hover : shade(grey-light);
+// $app-border-color       : shade(grey-lighter);
+// $app-border-color-hover : shade(grey-light);
 
 // APP link styles
 $link: $blue;
-$link-invert: findColorInvert($blue);
+// $link-invert: findColorInvert($blue);
 $link-visited: $purple;
 
-$link-hover: shade(grey-darker);
-$link-hover-border: shade(grey-light);
+// $link-hover: shade(grey-darker);
+// $link-hover-border: shade(grey-light);
 
-$link-focus: shade(grey-darker);
-$link-focus-border: $blue;
+// $link-focus: shade(grey-darker);
+// $link-focus-border: $blue;
 
-$link-active: shade(grey-darker);
-$link-active-border: shade(grey-dark);
+// $link-active: shade(grey-darker);
+// $link-active-border: shade(grey-dark);
 
 // transition and animation
 $app-easing             : ease-out;

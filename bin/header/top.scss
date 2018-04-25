@@ -1,5 +1,5 @@
 .top_bar {
-    background: #f5f6f8;
+    background: color(color);
     border-bottom: 1px solid #ebedef;
     max-height: 200px;
     overflow: hidden;
@@ -8,8 +8,8 @@
       position: relative;
       top: 3px;
     }
+    color:$white;
 }
-
 
 .social-media{
     display: flex;
