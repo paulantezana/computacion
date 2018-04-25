@@ -7,12 +7,14 @@
 
 @include sn-content();
 
+@include stickySite();
 
 
 @import "header/all";
 @import "teaser/all";
 @import "full/all";
 @import "drupal/all";
+@import "sidebar/all";
 
 
 .grid-template{
@@ -29,3 +31,4 @@
         grid-gap: 2rem;
     }
 }
+

@@ -72,6 +72,44 @@
 
 __webpack_require__(1);
 
+var getDistanceTop = function getDistanceTop(element) {
+    return element.getBoundingClientRect().top + window.pageYOffset;
+};
+
+var header = document.getElementById('header-sticky');
+var headerDistanceTop = void 0;
+if (header) headerDistanceTop = getDistanceTop(header);
+
+window.addEventListener('scroll', function () {
+    var windowScroll = window.pageYOffset;
+    if (windowScroll > headerDistanceTop) {
+        header.classList.add('sticky');
+    } else {
+        header.classList.remove('sticky');
+    }
+});
+
+var aside = document.getElementById('aside-sticky');
+var asideDistanceTop = void 0,
+    asideWidth = void 0;
+if (aside) {
+    asideDistanceTop = getDistanceTop(aside);
+    asideWidth = aside.getBoundingClientRect().width;
+}
+
+window.addEventListener('scroll', function () {
+    var windowScroll = window.pageYOffset;
+    if (aside) {
+        if (windowScroll > asideDistanceTop) {
+            aside.classList.add('sticky');
+            aside.style.width = asideWidth + 'px';
+            aside.style.top = header.getBoundingClientRect().height + 16 + 'px';
+        } else {
+            aside.classList.remove('sticky');
+        }
+    }
+});
+
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
