@@ -1,0 +1,35 @@
+.top_bar {
+    background: #f5f6f8;
+    border-bottom: 1px solid #ebedef;
+    max-height: 200px;
+    overflow: hidden;
+    transition: all 600ms ease-in;
+    [class*="icon-"]::before{
+      position: relative;
+      top: 3px;
+    }
+}
+
+
+.social-media{
+    display: flex;
+    align-items: center;
+    @extend %list;
+    &__link{
+      display: block;
+      padding: 0.55rem 1rem;
+      &:hover{
+          color: $white;
+      }
+      &.icon-facebook:hover{ background: #3B5998; }
+      &.icon-twitter:hover{ background: #00AFF0; }
+      &.icon-vimeo:hover{ background: #00AFF0; }
+      &.icon-youtube:hover{ background: #D34836; }
+    }
+    &__adress{
+        margin: 0 1rem;
+        @include to(l){
+            display: none;
+        }
+    }
+}

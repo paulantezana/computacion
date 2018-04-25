@@ -1,0 +1,23 @@
+.header{
+    padding: 0;
+    box-shadow: 0 0 2px 2px rgba(0,0,0,0.2);
+    z-index: 9999;
+    width: 100%;
+    background: $white;
+
+    &__social{
+      //background: #f5f6f8;
+      border-bottom: 1px solid #ebedef;
+      max-height: 200px;
+      overflow: hidden;
+    }
+
+    color: #848994;
+    a{
+      color: inherit;
+    }
+}
+
+
+@import "top.scss";
+@import "menu.scss";

@@ -1,0 +1,26 @@
+name: computacion
+type: theme
+description:  "computacion en informatica vilcanota sicuani - cusco - peru"
+core: 8.x
+package: custom
+version: 1.0
+regions:
+  header: Header
+  front_banner: 'Banner principal'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  front_firts: 'Front First'
+  front_second: 'Front Second'
+  front_third: 'Front Third'
+  carrera_firts: 'Carrera First'
+  carrera_second: 'Carrera Second'
+  carrera_third: 'Carrera Third'
+  highlighted: Highlighted
+  help: help
+  breadcrumb: Breadcrumb
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer
+libraries:
+  - computacion/base

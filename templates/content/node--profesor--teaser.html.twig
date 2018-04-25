@@ -1,0 +1,17 @@
+<article class="teaser-profesor">
+    <div class="teaser-profesor__profile">
+        {% if content.field_profesor_foto %}
+            {{ content.field_profesor_foto }}
+        {% else %}
+            <div>
+                <img src="http://via.placeholder.com/150x150" alt="">
+            </div>
+        {% endif %}
+    </div>
+    <div class="teaser-profesor__data">
+        {{ content.field_profesor_cargo }}
+        {{ content.field_profesor_especialidad }}
+        {{ content.field_profesor_nombre }}
+        {{ content.field_profesor_apellido }}
+    </div>
+</article>

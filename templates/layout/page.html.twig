@@ -1,0 +1,15 @@
+{% include directory ~ '/partials/header.html.twig' %}
+<div class="main-container">
+    <div class="sn-container">
+        {{ page.breadcrumb }}
+    </div>
+    <main class="main sn-container-aside" role="main">
+        <div class="site">
+            {{ page.content }}
+        </div>
+        <div class="aside">
+            {{ page.sidebar_first }}
+        </div>
+    </main>
+</div>
+{% include directory ~ '/partials/footer.html.twig' %}

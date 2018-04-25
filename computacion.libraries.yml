@@ -1,0 +1,7 @@
+base:
+  version: 1.x
+  css:
+    theme:
+      assets/base.css: { }
+  js:
+    assets/base.js: { }

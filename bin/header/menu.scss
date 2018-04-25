@@ -1,0 +1,16 @@
+@include sn-menu();
+
+
+.main-menu{
+    a{
+        font-family: Lato;
+        text-transform: uppercase;
+    }
+    & > li > a{
+        line-height: 5rem;
+        &:hover{
+            color: color(color,3);
+            background: shade(white-bis);
+        }
+    }
+}

@@ -1,0 +1,44 @@
+<article class="teaser-module">
+    <div class="teaser-module__item">
+        {{ title_prefix }}
+        {% if not page %}
+            <h2{{ title_attributes }} class="teaser-module__title">
+                <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+            </h2>
+        {% endif %}
+        {{ title_suffix }}
+        <div{{ content_attributes.addClass('node__content') }}>
+            {{ content.body }}
+        </div>
+        <div class="teaser__readMore" >
+            {{ content.links  }}
+        </div>
+    </div>
+    <div class="teaser-module__item">
+        {{ content.field_modulo_portada }}
+    </div>
+</article>
+
+
+{#{% if links -%}#}
+    {#{%- if heading -%}#}
+        {#{%- if heading.level -%}#}
+            {#<{{ heading.level }}{{ heading.attributes }}>{{ heading.text }}</{{ heading.level }}>#}
+        {#{%- else -%}#}
+            {#<h2{{ heading.attributes }}>{{ heading.text }}</h2>#}
+        {#{%- endif -%}#}
+    {#{%- endif -%}#}
+    {#<ul{{ attributes }}>#}
+        {#{%- for item in links -%}#}
+            {#<li{{ item.attributes }}>#}
+                {#{%- if item.link -%}#}
+                    {#{{ item.link }}#}
+                {#{%- elseif item.text_attributes -%}#}
+                    {#<span{{ item.text_attributes }}>{{ item.text }}</span>#}
+                {#{%- else -%}#}
+                    {#{{ item.text }}#}
+                {#{%- endif -%}#}
+            {#</li>#}
+        {#{%- endfor -%}#}
+    {#</ul>#}
+{#{%- endif %}#}

@@ -1,0 +1,39 @@
+
+.teaser {
+    background: white;
+    border: 1px solid #E0E0E0;
+    padding: 1rem;
+    &__title{
+        color: shade(grey-dark);
+        margin-top: 0;
+        text-transform: uppercase;
+        font-size: 1rem;
+        a{
+            color: inherit;
+        }
+        span{ color:  inherit; }
+    }
+    &__footer{
+        display: flex;
+        align-items: center;
+        img{
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 100%;
+            margin-right: 0.5rem;
+        }
+    }
+    &__date{
+        color: #2E363F;
+        font-size: 0.7rem;
+    }
+    &__readMore{
+        margin: 0.5rem 0;
+        ul{
+            display: flex;
+        }
+        a{
+            font-size: 0.8rem;
+        }
+    }
+}
