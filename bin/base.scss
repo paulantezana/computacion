@@ -15,7 +15,11 @@
 @import "full/all";
 @import "drupal/all";
 @import "sidebar/all";
+@import "home/all";
 
+.sn-video{
+    @include sn-video();
+}
 
 .grid-template{
     display: grid;

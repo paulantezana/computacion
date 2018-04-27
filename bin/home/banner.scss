@@ -1,0 +1,49 @@
+.banner-home{
+    position: relative;
+    height: 30rem;
+    color: $white;
+    &__back{
+        height: 100%;
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__main{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    &__content{
+        height: 100%;
+    }
+    &__title{
+        font-size: 3rem;
+        font-weight: $app-font-weight-bold;
+        margin: 0 0 0.7rem 0;
+    }
+    &__slogan{
+        background: $black;
+        border-radius: 10px;
+        padding: 0.3rem 1rem;
+        display: inline-block;
+        color: color(inverse);
+    }
+    &__text{
+        margin: 0 0 0.7rem 0;
+    }
+
+    &__link{
+        padding: 0.3rem 1rem;
+        background: #f90b43;
+        color: $white;
+        border-radius: 5px;
+        &:hover{
+            color: $white;
+        }
+    }
+}
