@@ -17,7 +17,7 @@
     @extend %list;
     &__link{
       display: block;
-      padding: 0.55rem 1rem;
+      padding: 0.45rem 1rem;
       &:hover{
           color: $white;
       }

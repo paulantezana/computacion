@@ -1,11 +1,10 @@
 .header{
     padding: 0;
-    border-bottom: #ebedef;
-    
+    border-bottom: 1px solid shade(grey-lighter);
     z-index: 9999;
     width: 100%;
     background: $white;
-
+    color: shade(grey-dark);
     &__social{
       //background: #f5f6f8;
       border-bottom: 1px solid #ebedef;
@@ -16,10 +15,13 @@
     &__menu{
       position: relative;
     }
-
-    color: #848994;
     a{
       color: inherit;
+    }
+    .branding__item{
+      img{
+        height: 3rem;
+      }
     }
 }
 
