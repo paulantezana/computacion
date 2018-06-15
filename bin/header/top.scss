@@ -1,6 +1,7 @@
 .top_bar {
-    background: color(color);
+    background: #fefefe;
     border-bottom: 1px solid #ebedef;
+    font-size: 0.82rem;
     max-height: 200px;
     overflow: hidden;
     transition: all 600ms ease-in;
@@ -8,7 +9,6 @@
       position: relative;
       top: 3px;
     }
-    color:$white;
 }
 
 .social-media{

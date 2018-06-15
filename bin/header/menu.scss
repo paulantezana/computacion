@@ -4,10 +4,10 @@
 .main-menu{
     a{
         font-family: Lato;
-        text-transform: uppercase;
     }
     & > li > a{
-        line-height: 5rem;
+        line-height: 4rem;
+        color: shade(grey-dark);
         &:hover{
             color: color(color);
             // background: shade(white-bis);
