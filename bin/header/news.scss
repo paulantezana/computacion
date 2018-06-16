@@ -1,0 +1,12 @@
+.news-container{
+    background: #0864AD;
+    color: shade(white-ter);
+    p {
+        text-align: center;
+        margin: 0.8em 0;
+    }
+    .news-timer{
+        color: color(inverse);
+        font-weight: bold;
+    }
+}

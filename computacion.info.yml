@@ -9,12 +9,8 @@ regions:
   front_banner: 'Banner principal'
   primary_menu: 'Primary menu'
   secondary_menu: 'Secondary menu'
-  front_firts: 'Front First'
-  front_second: 'Front Second'
-  front_third: 'Front Third'
+  news: News
   carrera_firts: 'Carrera First'
-  carrera_second: 'Carrera Second'
-  carrera_third: 'Carrera Third'
   highlighted: Highlighted
   help: help
   breadcrumb: Breadcrumb
