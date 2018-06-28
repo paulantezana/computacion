@@ -1,7 +1,14 @@
 import './base.scss';
+const toggleMenu = ()=>{
+    let menu = document.getElementById('main-menu');
+    let toggle = document.getElementById('main-menu-toggle');
+    
+    toggle.addEventListener('click',()=>{
+        menu.classList.toggle('main-menu--show');
+    });
+};
+toggleMenu();
 
-import { SNMenu }  from 'sedna/bin/components/menu/menu';
-SNMenu('main-menu', 'main-menu-toggle', 'header__menu');
 
 const getDistanceTop = element => {
     return element.getBoundingClientRect().top + window.pageYOffset;
@@ -11,6 +18,7 @@ const getDistanceTop = element => {
 const header = document.getElementById('header-sticky');
 let headerDistanceTop;
 if (header) headerDistanceTop = getDistanceTop(header);
+
 
 window.addEventListener('scroll', () => {
     let windowScroll = window.pageYOffset;

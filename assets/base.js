@@ -72,9 +72,15 @@
 
 __webpack_require__(1);
 
-var _menu = __webpack_require__(2);
+var toggleMenu = function toggleMenu() {
+    var menu = document.getElementById('main-menu');
+    var toggle = document.getElementById('main-menu-toggle');
 
-(0, _menu.SNMenu)('main-menu', 'main-menu-toggle', 'header__menu');
+    toggle.addEventListener('click', function () {
+        menu.classList.toggle('main-menu--show');
+    });
+};
+toggleMenu();
 
 var getDistanceTop = function getDistanceTop(element) {
     return element.getBoundingClientRect().top + window.pageYOffset;
@@ -155,49 +161,6 @@ countDown("Jun 28 2018 19:00:00 GMT-0500", "news-message", "Llego la hora de la 
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SNMenu", function() { return SNMenu; });
-let iconUP =    '<span class="icon">\n' +
-                    '  <i class="icon-up"></i>\n' +
-                '</span>';
-
-let iconDOWn =  '<span class="icon">\n' +
-                    '  <i class="icon-down"></i>\n' +
-                '</span>';
-
-let SNMenu = (mainMenu = 'main-menu', mainMenuToggle = 'main-menu-toggle', mainMenuNav='main-menu-nav') => {
-    // SUB MENUS
-    let menu = document.getElementById(mainMenu);
-    let menuItem = menu.querySelectorAll('li');
-    for (let ele of menuItem){
-        if (ele.childElementCount === 2){ // if submenu
-            let toggle = ele.firstElementChild; // First Element
-            let content = ele.lastElementChild; // Second Element
-            toggle.classList.add('main-menu-down');  // add Icon down
-            toggle.addEventListener('click',(e)=>{
-                e.preventDefault();
-                toggle.classList.toggle('main-menu-up'); // add Icon up
-                content.classList.toggle('showMenu');   // add class show menu
-            });
-        }
-    }
-    // TOGGLE MENU
-    let menuToggle = document.getElementById(mainMenuToggle);
-    let menuNav = document.getElementById(mainMenuNav);
-    menuToggle.addEventListener('click',()=>{
-        menuNav.classList.toggle('main-menu-nav--show');
-    });
-};
-
-
-
-
 
 /***/ })
 /******/ ]);

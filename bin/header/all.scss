@@ -13,14 +13,15 @@
     }
 
     &__menu{
-      position: relative;
+      padding-top: .5rem;
+      padding-bottom: .5rem;
     }
     a{
       color: inherit;
     }
     .branding__item{
       img{
-        height: 3rem;
+        height: 4rem;
       }
     }
 }
