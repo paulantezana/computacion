@@ -6,23 +6,27 @@
     background: $white;
     color: shade(grey-dark);
     &__social{
-      //background: #f5f6f8;
-      border-bottom: 1px solid #ebedef;
-      max-height: 200px;
-      overflow: hidden;
+        //background: #f5f6f8;
+        border-bottom: 1px solid #ebedef;
+        max-height: 200px;
+        overflow: hidden;
     }
 
     &__menu{
-      padding-top: .5rem;
-      padding-bottom: .5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        & > .sn-container{
+            padding-left: .5rem;
+            padding-right: .5rem;
+        }
     }
     a{
-      color: inherit;
+        color: inherit;
     }
     .branding__item{
-      img{
-        height: 4rem;
-      }
+        img{
+            height: 3rem;
+        }
     }
 }
 

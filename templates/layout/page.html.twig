@@ -1,17 +1,19 @@
-{% include directory ~ '/partials/header.html.twig' %}
-<div class="main-container">
-    <div class="sn-container">
-        {{ page.breadcrumb }}
-    </div>
-    <main class="sn-container" role="main">
-        <div class="sn-item l-75 content">
-            {{ page.content }}
+<div class="layout-container">
+    {% include directory ~ '/partials/header.html.twig' %}
+    <div class="main-container">
+        <div class="sn-container">
+            {{ page.breadcrumb }}
         </div>
-        <div class="sn-item l-25 sidebar">
-            <div id="aside-sticky">
-                {{ page.sidebar_right}}
+        <main class="sn-container" role="main">
+            <div class="sn-item l-75 content">
+                {{ page.content }}
             </div>
-        </div>
-    </main>
+            <div class="sn-item l-25 sidebar">
+                <div id="aside-sticky">
+                    {{ page.sidebar_right}}
+                </div>
+            </div>
+        </main>
+    </div>
+    {% include directory ~ '/partials/footer.html.twig' %}
 </div>
-{% include directory ~ '/partials/footer.html.twig' %}

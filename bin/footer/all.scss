@@ -1,0 +1,11 @@
+.footer-container{
+    background: #21252A;
+    color: shade(white-ter);
+}
+.footer{
+    &__credentials{
+        padding-top: 1rem;
+        background: #1A1E22;
+        padding-bottom: 1rem;
+    }
+}

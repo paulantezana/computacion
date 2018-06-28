@@ -16,6 +16,7 @@
 @import "drupal/all";
 @import "sidebar/all";
 @import "home/all";
+@import "footer/all";
 
 .sn-video{
     @include sn-video();
@@ -25,6 +26,20 @@
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
     grid-gap: 2rem;
+}
+
+body,
+body>div,
+.layout-container{
+    height: 100vh;
+}
+
+.layout-container{
+    display: flex;
+    flex-direction: column;
+    .footer-container{
+        margin-top: auto;
+    }
 }
 
 

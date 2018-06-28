@@ -1,10 +1,19 @@
 <div class="footer-container">
-    {% if page.footer %}
         <footer class="footer" role="contentinfo">
-            <div class="sn-container">
-                {{ page.footer }}
-                <a href="http://www.paulantezana.com" target="_blanck" title="contador de visitas com"><img src="https://counter8.freecounter.ovh/private/contadorvisitasgratis.php?c=u6gn2pszljp5cnd5wktc59pb3xwj4rrs" border="0" title="contador de visitas com" alt="contador de visitas com"></a>
+            {% if page.footer %}
+            <div class="sn-container footer__content">
+                    {{ page.footer }}
+            </div>
+            {% endif %}
+            <div class="sn-container footer__credentials">
+                <div class="sn-item s-100 m-50 cross-center"> 
+                    <div id="sfcsng68b5tem78dcwezsrtlf9f8wg43jx3"></div>
+                    <script type="text/javascript" src="https://counter9.whocame.ovh/private/counter.js?c=sng68b5tem78dcwezsrtlf9f8wg43jx3&down=async" async></script>
+                    <noscript><a href="https://www.contadorvisitasgratis.com" title="contador de visitas para mi pagina web"><img src="https://counter9.whocame.ovh/private/contadorvisitasgratis.php?c=sng68b5tem78dcwezsrtlf9f8wg43jx3" border="0" title="contador de visitas para mi pagina web" alt="contador de visitas para mi pagina web"></a></noscript>
+                </div>
+                <div class="sn-item s-100 m-50 cross-center main-end"> 
+                    Computación en informática
+                </div>
             </div>
         </footer>
-    {% endif %}
 </div>

@@ -1,25 +1,27 @@
-{% include directory ~ '/partials/header.html.twig' %}
+<div class="layout-container">
+    {% include directory ~ '/partials/header.html.twig' %}
 
-{# ============== SLIDER PRINCIPAL ================= #}
-<div class="full">
-    {{ page.front_banner }}
-</div>
+    {# ============== SLIDER PRINCIPAL ================= #}
+    <div class="full">
+        {{ page.front_banner }}
+    </div>
 
-{# ==================== Main ==================== #}
-<div class="main-container">
-    <main class="main">
-        <div class="sn-container">
-            {{ page.content }}
-        </div>
-        {# <div>
-            {{ page.front_firts }}
-        </div> 
-        <div class="sn-container">
-            {{ page.front_second }}
-        </div>
-        <div class="sn-container">
-            {{ page.front_third }}
-        </div> #}
-    </main>
+    {# ==================== Main ==================== #}
+    <div class="main-container">
+        <main class="main">
+            <div class="sn-container">
+                {{ page.content }}
+            </div>
+            {# <div>
+                {{ page.front_firts }}
+            </div> 
+            <div class="sn-container">
+                {{ page.front_second }}
+            </div>
+            <div class="sn-container">
+                {{ page.front_third }}
+            </div> #}
+        </main>
+    </div>
+    {% include directory ~ '/partials/footer.html.twig' %}
 </div>
-{% include directory ~ '/partials/footer.html.twig' %}
