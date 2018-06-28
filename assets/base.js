@@ -1,1 +1,203 @@
-!function(e){function t(r){if(n[r])return n[r].exports;var i=n[r]={i:r,l:!1,exports:{}};return e[r].call(i.exports,i,i.exports,t),i.l=!0,i.exports}var n={};t.m=e,t.c=n,t.d=function(e,n,r){t.o(e,n)||Object.defineProperty(e,n,{configurable:!1,enumerable:!0,get:r})},t.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="",t(t.s=0)}([function(e,t,n){"use strict";n(1);var r=function(e){return e.getBoundingClientRect().top+window.pageYOffset},i=document.getElementById("header-sticky"),o=void 0;i&&(o=r(i)),window.addEventListener("scroll",function(){window.pageYOffset>o?i.classList.add("sticky"):i.classList.remove("sticky")});var s=document.getElementById("aside-sticky"),a=void 0,c=void 0;s&&(a=r(s),c=s.getBoundingClientRect().width),window.addEventListener("scroll",function(){var e=window.pageYOffset;s&&(e>a?(s.classList.add("sticky"),s.style.width=c+"px",s.style.top=i.getBoundingClientRect().height+16+"px"):s.classList.remove("sticky"))});var d=function(e){var t=new Date,n=(new Date(e)-t+1e3)/1e3;return{remainTime:n,second:("0"+Math.floor(n%60)).slice(-2),minute:("0"+Math.floor(n/60%60)).slice(-2),hours:("0"+Math.floor(n/3600%24)).slice(-2),days:Math.floor(n/86400)}};!function(e,t,n){var r=document.getElementById(t);if(r){var i=document.createElement("span");i.setAttribute("class","news-timer"),r.appendChild(i);var o=setInterval(function(){var t=d(e);i.innerHTML=" "+t.days+"d:"+t.hours+"h:"+t.minute+"m:"+t.second+"s",t.remainTime<=1&&(clearInterval(o),i.innerHTML=n)},1e3)}}("Jun 28 2018 19:00:00 GMT-0500","news-message","Llego la hora de la verdad")},function(e,t){}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(1);
+
+var _menu = __webpack_require__(2);
+
+(0, _menu.SNMenu)('main-menu', 'main-menu-toggle', 'header__menu');
+
+var getDistanceTop = function getDistanceTop(element) {
+    return element.getBoundingClientRect().top + window.pageYOffset;
+};
+
+var header = document.getElementById('header-sticky');
+var headerDistanceTop = void 0;
+if (header) headerDistanceTop = getDistanceTop(header);
+
+window.addEventListener('scroll', function () {
+    var windowScroll = window.pageYOffset;
+    if (windowScroll > headerDistanceTop) {
+        header.classList.add('sticky');
+    } else {
+        header.classList.remove('sticky');
+    }
+});
+
+var aside = document.getElementById('aside-sticky');
+var asideDistanceTop = void 0,
+    asideWidth = void 0;
+if (aside) {
+    asideDistanceTop = getDistanceTop(aside);
+    asideWidth = aside.getBoundingClientRect().width;
+}
+
+window.addEventListener('scroll', function () {
+    var windowScroll = window.pageYOffset;
+    if (aside) {
+        if (windowScroll > asideDistanceTop) {
+            aside.classList.add('sticky');
+            aside.style.width = asideWidth + 'px';
+            aside.style.top = header.getBoundingClientRect().height + 16 + 'px';
+        } else {
+            aside.classList.remove('sticky');
+        }
+    }
+});
+
+var getRemainTime = function getRemainTime(deadline) {
+    var now = new Date(),
+        remainTime = (new Date(deadline) - now + 1000) / 1000,
+        second = ('0' + Math.floor(remainTime % 60)).slice(-2),
+        minute = ('0' + Math.floor(remainTime / 60 % 60)).slice(-2),
+        hours = ('0' + Math.floor(remainTime / 3600 % 24)).slice(-2),
+        days = Math.floor(remainTime / (3600 * 24));
+    return {
+        remainTime: remainTime,
+        second: second,
+        minute: minute,
+        hours: hours,
+        days: days
+    };
+};
+
+var countDown = function countDown(deadline, elem, finalMessage) {
+    var el = document.getElementById(elem);
+    if (el) {
+        var et = document.createElement("span");
+        et.setAttribute("class", "news-timer");
+        el.appendChild(et);
+
+        var timerUpdate = setInterval(function () {
+            var t = getRemainTime(deadline);
+            et.innerHTML = ' ' + t.days + 'd:' + t.hours + 'h:' + t.minute + 'm:' + t.second + 's';
+            if (t.remainTime <= 1) {
+                clearInterval(timerUpdate);
+                et.innerHTML = finalMessage;
+            }
+        }, 1000);
+    }
+};
+
+countDown("Jun 28 2018 19:00:00 GMT-0500", "news-message", "Llego la hora de la verdad");
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SNMenu", function() { return SNMenu; });
+let iconUP =    '<span class="icon">\n' +
+                    '  <i class="icon-up"></i>\n' +
+                '</span>';
+
+let iconDOWn =  '<span class="icon">\n' +
+                    '  <i class="icon-down"></i>\n' +
+                '</span>';
+
+let SNMenu = (mainMenu = 'main-menu', mainMenuToggle = 'main-menu-toggle', mainMenuNav='main-menu-nav') => {
+    // SUB MENUS
+    let menu = document.getElementById(mainMenu);
+    let menuItem = menu.querySelectorAll('li');
+    for (let ele of menuItem){
+        if (ele.childElementCount === 2){ // if submenu
+            let toggle = ele.firstElementChild; // First Element
+            let content = ele.lastElementChild; // Second Element
+            toggle.classList.add('main-menu-down');  // add Icon down
+            toggle.addEventListener('click',(e)=>{
+                e.preventDefault();
+                toggle.classList.toggle('main-menu-up'); // add Icon up
+                content.classList.toggle('showMenu');   // add class show menu
+            });
+        }
+    }
+    // TOGGLE MENU
+    let menuToggle = document.getElementById(mainMenuToggle);
+    let menuNav = document.getElementById(mainMenuNav);
+    menuToggle.addEventListener('click',()=>{
+        menuNav.classList.toggle('main-menu-nav--show');
+    });
+};
+
+
+
+
+
+/***/ })
+/******/ ]);

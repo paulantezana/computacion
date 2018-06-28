@@ -1,5 +1,8 @@
 import './base.scss';
 
+import { SNMenu }  from 'sedna/bin/components/menu/menu';
+SNMenu('main-menu', 'main-menu-toggle', 'header__menu');
+
 const getDistanceTop = element => {
     return element.getBoundingClientRect().top + window.pageYOffset;
 };
