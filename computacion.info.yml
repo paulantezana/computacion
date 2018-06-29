@@ -8,10 +8,12 @@ regions:
   header: Header
   primary_menu: 'Primary menu'
   news: News
+  front_banner: 'Front Banner'
   front_1: 'Front 1'
   front_2: 'Front 2'
   front_3: 'Front 3'
   front_4: 'Front 4'
+  front_4: 'Front 5'
   content: Content
   sidebar_left: 'Sidebar Left'
   sidebar_right: 'Sidebar Right'

@@ -1,0 +1,60 @@
+.front-1{
+    background: $white;
+    box-shadow: 30px 0 $white,
+                -30px 0 $white;
+}
+
+.front-2{
+    background: shade(white-ter);
+    box-shadow: 30px 0 shade(white-ter),
+                -30px 0 shade(white-ter);
+}
+
+
+.front-3{
+    background: $white;
+    box-shadow: 30px 0 $white,
+                -30px 0 $white;
+}
+
+
+.front-4{
+    background: shade(white-ter);
+    box-shadow: 30px 0 shade(white-ter),
+                -30px 0 shade(white-ter);
+}
+
+
+.front-5{
+    background: $white;
+    box-shadow: 30px 0 $white,
+                -30px 0 $white;
+}
+
+.front-region{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    @include from(l){
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    transform: rotate(-1.5deg);
+    & > .sn-container{
+        transform: rotate(1.5deg);
+        .views-element-container{
+            width: 100%;
+        }
+    }
+}
+
+
+// Decoration
+.front-region {
+    .views-element-container{
+        & > h2{
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+    }
+}
