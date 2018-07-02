@@ -1,27 +1,62 @@
 .front-1{
     background: $white;
-    box-shadow: 30px 0 $white,
-                -30px 0 $white;
 }
 
 .front-2{
-    background: shade(white-ter);
-    box-shadow: 30px 0 shade(white-ter),
-                -30px 0 shade(white-ter);
+    background: #F7F9FB;
+    .views-field-title{
+        a{
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
 }
-
 
 .front-3{
     background: $white;
-    box-shadow: 30px 0 $white,
-                -30px 0 $white;
 }
 
 
 .front-4{
-    background: shade(white-ter);
-    box-shadow: 30px 0 shade(white-ter),
-                -30px 0 shade(white-ter);
+    background: url('/themes/custom/computacion/assets/unsplashcomputer.jpg');
+    background-attachment: fixed;
+    position: relative;
+    &::before{
+        content: "";
+        width: 100%;
+        top: 0;
+        height: 100%;
+        position: absolute;
+        background: rgba(9, 23, 37, 0.7);
+    }
+    .sn-container{
+        position: relative;
+        z-index: 10;
+        color: white;
+        a{
+            color: inherit;
+            font-size: 1rem;
+        }
+    }
+
+
+
+
+    .views-field-field-poster{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            border-radius: 100%;
+            width: 7rem;
+            height: 7rem;
+        }
+    }
+    .views-field-title{
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        text-align: center;
+    }
 }
 
 
@@ -32,15 +67,13 @@
 }
 
 .front-region{
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     @include from(l){
         padding-top: 4rem;
         padding-bottom: 4rem;
     }
-    transform: rotate(-1.5deg);
     & > .sn-container{
-        transform: rotate(1.5deg);
         .views-element-container{
             width: 100%;
         }

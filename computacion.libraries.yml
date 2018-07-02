@@ -5,3 +5,5 @@ base:
       assets/base.css: { }
   js:
     assets/base.js: { }
+  dependencies:
+    - core/jquery
