@@ -1,4 +1,4 @@
-import './index.scss';
+import './vars.scss';
 import './index.scss';
 
 const masonryLayout = (container, itmes, columns) => {

@@ -1,8 +1,6 @@
 $max-grid-columns : 6 !default;
    
 .masonry-grid{
-    --columns: 1;
-    --gap: 1rem;
     display: grid;
     grid-template-columns: repeat(var(--columns),1fr);
     grid-gap: var(--gap);
