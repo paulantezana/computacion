@@ -1,4 +1,5 @@
 import './base.scss';
+import './grid';
 const toggleMenu = ()=>{
     let menu = document.getElementById('main-menu');
     let toggle = document.getElementById('main-menu-toggle');
@@ -8,6 +9,16 @@ const toggleMenu = ()=>{
     });
 };
 toggleMenu();
+
+
+// Massory layout
+const MassoryLayout = (container, items, columns) => {
+    container.classList.add('masonry-layout');
+    let cols = [];
+    for (let i =  0; i < columns; i++){
+        
+    }
+}
 
 
 const getDistanceTop = element => {

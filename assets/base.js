@@ -72,6 +72,8 @@
 
 __webpack_require__(1);
 
+__webpack_require__(2);
+
 var toggleMenu = function toggleMenu() {
     var menu = document.getElementById('main-menu');
     var toggle = document.getElementById('main-menu-toggle');
@@ -81,6 +83,13 @@ var toggleMenu = function toggleMenu() {
     });
 };
 toggleMenu();
+
+// Massory layout
+var MassoryLayout = function MassoryLayout(container, items, columns) {
+    container.classList.add('masonry-layout');
+    var cols = [];
+    for (var i = 0; i < columns; i++) {}
+};
 
 var getDistanceTop = function getDistanceTop(element) {
     return element.getBoundingClientRect().top + window.pageYOffset;
@@ -158,6 +167,51 @@ countDown("Jun 28 2018 19:00:00 GMT-0500", "news-message", "Llego la hora de la 
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(3);
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+var masonryLayout = function masonryLayout(container, itmes, columns) {
+    var columnsElements = [];
+
+    for (var i = 1; i <= columns; i++) {
+        var column = document.createElement('div');
+        container.appendChild(column);
+        columnsElements.push(column);
+    }
+
+    for (var m = 0; m < Math.ceil(itmes.length / columns); m++) {
+        for (var n = 0; n < columns; n++) {
+            var item = itmes[m * columns + n];
+            columnsElements[n].appendChild(item);
+        }
+    }
+};
+
+var masonryContainers = [].concat(_toConsumableArray(document.querySelectorAll('.masonry-grid')));
+if (masonryContainers) {
+    masonryContainers.map(function (container) {
+        var masonryItems = container.querySelectorAll('.masonry-grid__item');
+        var cols = getComputedStyle(container).getPropertyValue('--columns');
+        if (masonryItems && cols) {
+            masonryLayout(container, masonryItems, cols);
+        }
+    });
+}
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

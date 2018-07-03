@@ -24,12 +24,16 @@ module.exports = {
     module: {
         rules:[
             {
+                test: /\.vars.scss$/,
+                loader: 'babel-loader!postcss-variables-loader'
+            },
+            {
                 test    : /\.(scss|css)/,
+                exclude: /\.vars.scss$/,
                 use     : ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use : ['css-loader','postcss-loader','sass-loader']
                 })
-                // use: ['style-loader','css-loader','postcss-loader','sass-loader']
             },
 
             {
@@ -38,7 +42,6 @@ module.exports = {
                 use     : 'babel-loader'
             },
 
-            // the following 3 rules handle font extraction
             {
                 test: /\.(ttf|eot|woff|woff2|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 loader: 'url-loader'
