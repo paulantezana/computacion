@@ -83,20 +83,20 @@
 {#{{ attach_library('classy/node') }}#}
 <article class="teaser teaser-profesor">
 
-    <div class="teaser-profesor__profile">
+    <div class="profesor__profile">
         {{ content.field_poster }}
     </div>
 
     {{ title_prefix }}
         {% if not page %}
-            <h2{{ title_attributes }} class="teaser-profesor__title">
+            <h2{{ title_attributes }} class="profesor__title">
                 <a href="{{ url }}" rel="bookmark">{{ label }}</a>
             </h2>
         {% endif %}
     {{ title_suffix }}
 
     <div{{ content_attributes.addClass('teaser-profesor__content') }}>
-        {# {{ content.body }} #}
+        {{ content.body }}
     </div> 
 
 </article>

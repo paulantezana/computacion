@@ -101,7 +101,20 @@
         </footer>
     {% endif %}
     
-    <div class="article__content__full">
-        {{ content }}
+    <div class="profesor__content--full">
+        <div class="profesor__profile">
+            {{ content.field_poster }}
+        </div>
+        <div class="main-center profesor__social">
+            {{content.field_facebook}}
+            {{content.field_youtube}}
+            {{content.field_twitter}}
+            {{content.field_github}}
+            {{content.field_website}}
+        </div>
+        <div class="profesor__profile">
+            {{ content.body }}
+        </div>
+        {# {{ content }} #}
     </div>
 </article>

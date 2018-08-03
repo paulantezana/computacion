@@ -21,46 +21,46 @@ const MassoryLayout = (container, items, columns) => {
 }
 
 
-const getDistanceTop = element => {
-    return element.getBoundingClientRect().top + window.pageYOffset;
-};
+// const getDistanceTop = element => {
+//     return element.getBoundingClientRect().top + window.pageYOffset;
+// };
 
 
-const header = document.getElementById('header-sticky');
-let headerDistanceTop;
-if (header) headerDistanceTop = getDistanceTop(header);
+// const header = document.getElementById('header-sticky');
+// let headerDistanceTop;
+// if (header) headerDistanceTop = getDistanceTop(header);
 
 
-window.addEventListener('scroll', () => {
-    let windowScroll = window.pageYOffset;
-    if ( windowScroll > headerDistanceTop) {
-        header.classList.add('sticky')
-    } else {
-        header.classList.remove('sticky')
-    }
-});
+// window.addEventListener('scroll', () => {
+//     let windowScroll = window.pageYOffset;
+//     if ( windowScroll > headerDistanceTop) {
+//         header.classList.add('sticky')
+//     } else {
+//         header.classList.remove('sticky')
+//     }
+// });
 
 
-const aside = document.getElementById('aside-sticky');
-let asideDistanceTop, asideWidth;
-if (aside) {
-    asideDistanceTop = getDistanceTop(aside);
-    asideWidth = aside.getBoundingClientRect().width;
-}
+// const aside = document.getElementById('aside-sticky');
+// let asideDistanceTop, asideWidth;
+// if (aside) {
+//     asideDistanceTop = getDistanceTop(aside);
+//     asideWidth = aside.getBoundingClientRect().width;
+// }
 
 
-window.addEventListener('scroll', () => {
-    let windowScroll = window.pageYOffset;
-    if(aside){
-        if ( windowScroll > asideDistanceTop) {
-            aside.classList.add('sticky');
-            aside.style.width = `${asideWidth}px`;
-            aside.style.top = `${header.getBoundingClientRect().height + 16}px`
-        } else {
-            aside.classList.remove('sticky');
-        }
-    }
-});
+// window.addEventListener('scroll', () => {
+//     let windowScroll = window.pageYOffset;
+//     if(aside){
+//         if ( windowScroll > asideDistanceTop) {
+//             aside.classList.add('sticky');
+//             aside.style.width = `${asideWidth}px`;
+//             aside.style.top = `${header.getBoundingClientRect().height + 16}px`
+//         } else {
+//             aside.classList.remove('sticky');
+//         }
+//     }
+// });
 
 
 
@@ -98,4 +98,4 @@ const countDown = (deadline, elem,  finalMessage) => {
     }
 }
 
-countDown("Jun 28 2018 19:00:00 GMT-0500","news-message","Llego la hora de la verdad");
+countDown("Aug 06 2018 17:11:47 GMT-0500","news-message","Llego la hora de la verdad");

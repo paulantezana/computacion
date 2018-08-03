@@ -70,38 +70,39 @@
  *   in different view modes.
  */
 #}
-{%
-    set classes = [
-        'node',
-        'node--' ~ node.bundle|clean_class,
-        node.isPromoted() ? 'node--promoted',
-        node.isSticky() ? 'node--sticky',
-        not node.isPublished() ? 'node--unpublished',
-        view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-    ]
-%}
-{{ attach_library('classy/node') }}
-<article{{ attributes.addClass(classes) }}>
+{#{%#}
+    {#set classes = [#}
+        {#'node',#}
+        {#'node--type-' ~ node.bundle|clean_class,#}
+        {#node.isPromoted() ? 'node--promoted',#}
+        {#node.isSticky() ? 'node--sticky',#}
+        {#not node.isPublished() ? 'node--unpublished',#}
+        {#view_mode ? 'node--view-mode-' ~ view_mode|clean_class,#}
+    {#]#}
+{#%}#}
+{#{{ attach_library('classy/node') }}#}
+<article class="teaser">
+    <div{{ content_attributes.addClass('node__content') }}>
+        {{ content }}
+    </div>  
 
-    {{ title_prefix }}
+    <div class="teaser__padding">
+        {{ title_prefix }}
         {% if not page %}
-            <h2{{ title_attributes }}>#}
+            <h2{{ title_attributes }} class="teaser__title">
                 <a href="{{ url }}" rel="bookmark">{{ label }}</a>
             </h2>
         {% endif %}
-    {{ title_suffix }}
+        {{ title_suffix }}
 
-    {% if display_submitted %}
-        <footer class="node__meta">
-            {{ author_picture }}
-            <div{{ author_attributes.addClass('node__submitted') }}>
-                {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-                {{ metadata }}
-            </div>
-        </footer>
-    {% endif %}
-    
-    <div class="article__content__full">
-        {{ content }}
+        {% if display_submitted %}
+            <div class="teaser__date">{{ date }}</div>
+            <footer class="teaser__footer">
+                {{ author_picture }}
+                <div class="teaser__footer__autor">
+                    {{ author_name }}
+                </div>
+            </footer>
+        {% endif %}
     </div>
 </article>

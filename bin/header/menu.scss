@@ -1,3 +1,4 @@
+$menu-min-width: 15rem !default;
 @mixin sn-menu($bp: l, $main-menu-class: '.main-menu'){
     #{$main-menu-class}{
         @media print{ display: none; }
@@ -7,8 +8,8 @@
     // Layout In Mobile
     #{$main-menu-class}{
         li ul{
-            max-height: 0;
             overflow: hidden;
+            max-height: 0;
             transition: all .4s;
         }
     }
@@ -42,6 +43,9 @@
             max-height: 1000px;
         }
     }
+
+
+
     /*
     ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
           MENU STYLES
@@ -53,13 +57,22 @@
     }
     #{$main-menu-class}{
         a{
-            line-height: $menu-line-height;
+            line-height: $menu-line-height + .5;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            @include from($bp){
+                align-items: center;
+                line-height: $menu-line-height;
+                padding: 0 1rem;
+            }
         }
         li > ul{
-            @include from($bp){  min-width: $menu-min-width;  }
+            @include from($bp){  
+                min-width: $menu-min-width;
+                background: white;
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     }
     /*
@@ -75,17 +88,17 @@
 
     /* SHOW SUBMENU ICONS USE IN JAVASCRIPT
        ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
-    .main-menu-down:after{
-        font-family: "sedna" !important;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        content: '\65';
-        position: relative;
-    }
-    .main-menu-up:after{
-        content: '\68';
-    }
+    // .main-menu-down:after{
+    //     font-family: "sedna" !important;
+    //     line-height: 1;
+    //     -webkit-font-smoothing: antialiased;
+    //     -moz-osx-font-smoothing: grayscale;
+    //     content: '\65';
+    //     position: relative;
+    // }
+    // .main-menu-up:after{
+    //     content: '\68';
+    // }
 
     /* MENU TOGGLE
        ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
@@ -105,11 +118,12 @@
             top: 0;
             background: shade(black-ter);
             color: white;
-            width: 80%;
+            width: 85%;
         }
     }
 
-    // USE IN JAVASCRIPT
+
+    // USE IN JAVASCRIPT clase que cambia desde javascript solo en moviles
     @include to($bp){
         .header__menu{
             .main-menu--show{
@@ -118,9 +132,10 @@
         }
     }
 
-    // Decoration styles
+    // Decoration styles estilos de estetica enlaces en hover 
+    // al menu de primer nivel solo en escritorio
     #{$main-menu-class}{
-        a{
+        & > li > a{
             text-shadow: 0 0 1px rgba(255,255,255,0.3);
             position: relative;
             &::before,
@@ -149,6 +164,17 @@
             &:hover,
             &:focus{
                 color: color(color);
+            }
+        }
+    }
+
+    // Decoracion a los menus de segundo nivel
+    #{$main-menu-class}{
+        &--sub{
+            a{
+                &:hover{
+                    background: shade(white-ter);
+                }
             }
         }
     }

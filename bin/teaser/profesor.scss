@@ -1,25 +1,31 @@
-.teaser-profesor{
-    border: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    &:hover{
-        box-shadow: 0 0;
-    }
-    &__profile{
-        img{
-            width: 10rem;
-            height: 10rem;
-            border-radius: 100%;
+.region{
+    .profesor{
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:hover{
+            box-shadow: 0 0;
+        }
+        &__profile{
+            img{
+                width: 10rem;
+                height: 10rem;
+                border-radius: 100%;
+            }
+        }
+        &__content--full{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
         }
     }
-
-}
-
-h2.teaser-profesor__title{
-    text-align: center;
-    font-size: 1.2rem;
-    color: $app-font-color;
-    a{color: inherit;}
-    span{ color: inherit;}
-}
+    
+    h2.profesor__title{
+        text-align: center;
+        font-size: 1.2rem;
+        color: $app-font-color;
+        a{color: inherit;}
+        span{ color: inherit;}
+    }
+} 
